@@ -1,0 +1,7 @@
+<div class="user-wrapper">
+  <%= image_tag @user.image.url, class: "user-img" %>
+  <div class="user-name"><%= "オーナー名：#{@user.name}" %></div>
+  <% if current_user == @user %>
+    <%= link_to 'ユーザー情報の編集', "/users/#{@user.id}/edit", class: 'btn btn-sm user-btn' %>
+  <% end %>
+</div>
