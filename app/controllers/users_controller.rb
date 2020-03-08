@@ -20,11 +20,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def cards
-    @user = User.find(params[:id])
-    @cards = @user.cards.page(params[:page]).per(CARD_NUM).order(:image)
-  end
-
   def edit
     @user = User.find(params[:id])
   end
@@ -39,6 +34,26 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     redirect_to root_path, success: "アカウントを削除しました"
     log_out @user
+  end
+
+  def cards
+    @user = User.find(params[:id])
+    @cards = @user.cards.page(params[:page]).per(CARD_NUM).order(:image)
+  end
+
+  def orders
+    @user = User.find(params[:id])
+    @cards = @user.cards
+    @pitchers = @cards.where(pitcher: "true")
+    @catchers = @cards.where(catcher: "true")
+    @firsts = @cards.where(first: "true")
+    @seconds = @cards.where(second: "true")
+    @thirds = @cards.where(third: "true")
+    @shorts = @cards.where(short: "true")
+    @lefts = @cards.where(left: "true")
+    @centers = @cards.where(center: "true")
+    @rights = @cards.where(right: "true")
+    @dhs = @cards.where(dh: "true")
   end
 
   private

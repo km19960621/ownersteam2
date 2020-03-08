@@ -5,3 +5,5 @@
     <%= link_to 'ユーザー情報の編集', "/users/#{@user.id}/edit", class: 'btn btn-sm user-btn' %>
   <% end %>
 </div>
+<%= link_to 'オーダー', "/users/#{@user.id}/orders" %>
+<%= link_to 'カード', "/users/#{@user.id}/cards" %>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   resources :users
+  get 'users/:id/orders', to: 'users#orders'
   get 'users/:id/cards', to: 'users#cards'
 
   resources :cards

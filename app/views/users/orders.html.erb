@@ -1,0 +1,33 @@
+<div class="order-wrapper">
+  <% for num in 1..10 do %>
+    <div class="order-single-wrapper">
+      <div class="order-title">
+        <%= link_to "駒形ダックス#{num}", "/users/#{@user.id}", class: "order-title-text" %>
+      </div>
+      <div class="order-single">
+        <div class="order-content">
+          <%= image_tag('ownersteam.png', :class => 'ground') %>
+
+
+          <% pitcher = @pitchers.sample %>
+          <% catcher = @catchers.sample %>
+          <% first = @firsts.sample %>
+          <% second = @seconds.sample %>
+          <% third = @thirds.sample %>
+          <% short = @shorts.sample %>
+          <% left = @lefts.sample %>
+          <% center = @centers.sample %>
+          <% right = @rights.sample %>
+          <% dh = @dhs.sample %>
+          <% players = pitcher, catcher, first, second, third, short, left, center, right, dh %>
+
+          <% positions = ["pitcher", "catcher", "first", "second", "third", "short", "left", "center", "right", "dh"] %>
+
+          <% for num in 1..10 do %>
+            <%= image_tag players[num - 1].image.url, :class => "#{positions[num - 1]} #{positions[num - 1]}-img img" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
