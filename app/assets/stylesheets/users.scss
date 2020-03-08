@@ -1,3 +1,65 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-wrapper {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 80vw;
+  max-width: 550px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 5px 5px rgba(0,0,0,0.6);
+}
+.user-img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}
+.user-name, .user-home {
+  color: white;
+  font-size: 12.5px;
+  margin: 7.5px;
+}
+
+.favorite-player-wrapper {
+  background: linear-gradient(to bottom, white, silver 50%, white);
+  margin: 0 auto;
+  text-align: center;
+  width: 150px;
+  padding: 3px;
+  border: 1px solid black;
+}
+.favorite-player-title {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: white;
+  background: linear-gradient(to bottom, dimgray, black 50%, dimgray);
+  border-left: solid 2.5px silver;
+  border-right: solid 2.5px silver;
+  margin-bottom: 0px;
+}
+.favorite-player {
+  width: 100%;
+  padding: 2px 6px;
+  border: 1px solid black;
+  background: linear-gradient(to bottom, black, darkgoldenrod 50%, gold);
+}
+
+.btn-wrapper {
+  text-align: center;
+  padding: 15px;
+}
+.btns {
+  color: white;
+  font-size: 5px;
+  width: 150px;
+  font-size: 10px;
+}
+.order-btn {
+  background-color: darkgoldenrod;
+}
+.card-btn {
+  background-color: gray;
+}
+.user-btn {
+  background-color: mediumseagreen;
+}
