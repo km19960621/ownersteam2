@@ -1,16 +1,13 @@
 .background {
-  min-height: 100vh;
-}
-
-.background:after {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  z-index: -3;
-  background: linear-gradient(to bottom, royalblue, deepskyblue);
+    height: 100vh;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, deepskyblue),
+        color-stop(1, royalblue)
+    );
+    background-attachment: fixed !important;
 }
 
 .alert {

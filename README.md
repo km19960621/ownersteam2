@@ -1,24 +1,18 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# OWNERSTEAM2
+## 概要
+野球のオーダー作成のうち打順をなくし、OWNERSTEAMをよりシンプルに使いやすくしたアプリです。カードとカードのポジションを登録し、登録したカードでランダムにオーダーを編成し表示するというアプリです。
+## 制作時期
+2020年3月
+## 機能
+* ユーザー登録、編集、削除
+* ログイン/ログアウト
+* カード登録、編集、削除
+* ユーザー詳細（ユーザーのオーダーをランダムに10個表示/ユーザーのカード一覧）
+* ページネーション
+* 全ユーザーのカードでランダムにオーダー作成
+##　使用技術
+* Ruby
+* Ruby on Rails
+* HTML
+* SCSS
+* SQLite

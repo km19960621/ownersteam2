@@ -4,8 +4,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user, :logged_in?
 
-  ORDER_NUM = 10
-  CARD_NUM = 40
+  CARD_NUM = 60
 
   private
 

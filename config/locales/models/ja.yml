@@ -1,0 +1,25 @@
+ja:
+  activerecord:
+    models:
+      card: カード
+      user: ユーザー
+    attributes:
+      card:
+        name: 選手名
+        image: カードの画像
+        pitcher: 投手
+        catcher: 捕手
+        first: 一塁手
+        second: 二塁手
+        third: 三塁手
+        short: 遊撃手
+        left: 左翼手
+        center: 中堅手
+        right: 右翼手
+        dh: DH
+      user:
+        name: オーナー名
+        email: メールアドレス
+        image: プロフィール画像
+        password: パスワード
+        password_confirmation: パスワード（確認）
