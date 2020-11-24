@@ -1,0 +1,14 @@
+<div class="order-wrapper">
+  <% if @pitchers.length != 0 && @catchers.length != 0 && @firsts.length != 0 && @seconds.length != 0 && @thirds.length != 0 && @shorts.length != 0 && @lefts.length != 0 && @centers.length != 0 && @rights.length != 0 && @dhs.length != 0 %>
+    <% for num in 1..10 do %>
+      <div class="order-single-wrapper">
+        <div class="order-title">
+          <p class="order-title-text">
+            駒形ダックス<%= "#{num}" %>
+          </p>
+        </div>
+        <%= render partial: 'orders/order-single', locals: { order: @order } %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

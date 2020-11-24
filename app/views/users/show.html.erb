@@ -2,10 +2,20 @@
   <%= image_tag @user.image.url, class: "user-img" %>
   <div class="user-name"><%= "オーナー名：#{@user.name}" %></div>
   <div class="btn-wrapper">
-    <%= link_to 'オーダー', "/users/#{@user.id}/orders", class: 'btn btns btn-sm order-btn' %>
-    <%= link_to 'カード', "/users/#{@user.id}/cards", class: 'btn btns btn-sm card-btn' %>
-    <% if current_user == @user %>
-      <%= link_to '編集', "/users/#{@user.id}/edit", class: 'btn btns btn-sm user-btn' %>
-    <% end %>
+    <p>
+      <%= link_to 'カード', "/users/#{@user.id}/cards", class: 'btn btns btn-sm card-btn' %>
+      <% if current_user == @user %>
+        <%= link_to '編集', "/users/#{@user.id}/edit", class: 'btn btns btn-sm user-btn' %>
+      <% end %>
+    </p>
+    <p>
+      <%= link_to 'オーダー', "/users/#{@user.id}/orders", class: 'btn btns btn-sm order-btn' %>
+      <%= link_to '2010', "/users/#{@user.id}/orders-2010", class: 'btn btns btn-sm order-btn' %>
+      <%= link_to '2011', "/users/#{@user.id}/orders-2011", class: 'btn btns btn-sm order-btn' %>
+      <%= link_to '2012', "/users/#{@user.id}/orders-2012", class: 'btn btns btn-sm order-btn' %>
+      <%= link_to '2013', "/users/#{@user.id}/orders-2013", class: 'btn btns btn-sm order-btn' %>
+      <%= link_to '2014', "/users/#{@user.id}/orders-2014", class: 'btn btns btn-sm order-btn' %>
+      <%= link_to '2015', "/users/#{@user.id}/orders-2015", class: 'btn btns btn-sm order-btn' %>
+    </p>
   </div>
 </div>
