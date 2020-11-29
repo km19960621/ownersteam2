@@ -33,8 +33,13 @@
             <% end %>
             <% positions = ["pitcher", "catcher", "first", "second", "third", "short", "left", "center", "right", "dh"] %>
             <% for num in 1..10 do %>
-              <%= link_to players[num - 1].image.url, 'data-lightbox': players[num - 1].image do %>
-                <%= image_tag players[num - 1].image.url, :class => "#{positions[num - 1]} #{positions[num - 1]}-img img" %>
+              <% player, position = players[num - 1], positions[num - 1] %>
+              <% if logged_in? %>
+                <% if player.user_id == current_user.id %>
+                  <%= link_to image_tag(player.image.url, :class => "#{position} #{position}-img img"), edit_card_path(player) %>
+                <% end %>
+              <% else %>
+                <%= image_tag player.image.url, :class => "#{position} #{position}-img img" %>
               <% end %>
             <% end %>
           </div>
